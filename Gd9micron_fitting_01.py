@@ -119,11 +119,11 @@ if __name__ == '__main__':
 
     bin_heights, bin_borders = np.histogram(rchi_left, n_bin, (x_min, x_max))
     bin_middles = 0.5*(bin_borders[1:] + bin_borders[:-1])
-    plt.errorbar(bin_middles, bin_heights, np.sqrt(bin_heights), (x_max - x_min) / (n_bin * 2), fmt='o',color='g',label='rising edge')
+    plt.errorbar(bin_middles, bin_heights, np.sqrt(bin_heights), (x_max - x_min) / (n_bin * 2), fmt='o',color='b',label='rising edge')
 
     bin_heights, bin_borders = np.histogram(rchi_right, n_bin, (x_min, x_max))
     bin_middles = 0.5*(bin_borders[1:] + bin_borders[:-1])
-    plt.errorbar(bin_middles, bin_heights, np.sqrt(bin_heights), (x_max - x_min) / (n_bin * 2), fmt='o',color='b',label='falling edge')
+    plt.errorbar(bin_middles, bin_heights, np.sqrt(bin_heights), (x_max - x_min) / (n_bin * 2), fmt='o',color='g',label='falling edge')
 
     plt.legend()
     plt.xlabel('Reduce $\chi$^2', fontsize=20)
